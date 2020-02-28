@@ -1,0 +1,2 @@
+[28-Feb-2020 16:13:49 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 32
+[28-Feb-2020 16:13:49 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 33
