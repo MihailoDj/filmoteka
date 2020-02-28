@@ -7,7 +7,7 @@
 
     $operacija = isset($_GET['metoda']) ? $_GET['metoda'] : $_POST['metoda'];
 
-    if ($operacija == 'ADD_USER') {
+    if ($operacija == 'REGISTER') {
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -41,16 +41,10 @@
         } else {
             if (password_verify($password, $result->fetch_object()->password)) {
                 echo("Dobrodosao, {$username}");
+                echo('<script type="text/javascript">location.href = \'index.php\';</script>');
             } else {
                 echo("Pogresna lozinka.");
             }
         }
-    }
-
-    function redirect($url) {
-        ob_start();
-        header('Location: '.$url);
-        ob_end_flush();
-        die();
     }
 ?>

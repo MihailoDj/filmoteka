@@ -9,7 +9,7 @@ function addUser() {
     }
 
     $.ajax({
-        url: 'config/kontroler.php?metoda=ADD_USER',
+        url: 'config/kontroler.php?metoda=REGISTER',
         type: 'POST',
         data: user,
         success: function(data) {
