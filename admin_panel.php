@@ -11,7 +11,11 @@
     <div class="navbar">
         <a href="login.php">Izloguj se</a>
         <a href="settings.php">Podesavanja naloga</a>
+        <a href="add_movie.php">Dodaj film</a>
+        <a href="view_movies.php">Pregled filmova</a>
     </div>
+
+    <div class="rezultat"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>

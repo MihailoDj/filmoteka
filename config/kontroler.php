@@ -49,4 +49,15 @@
             }
         }
     }
+
+    if ($operacija == "ADD_MOVIE") {
+        $name = trim($_POST["name"]);
+        $director = trim($_POST["director"]);
+        $release_date = trim($_POST["release_date"]);
+        $lead_actors = trim($_POST["lead_actors"]);
+        $supporting_actors = trim($_POST["supporting_actors"]);
+
+        $sql = "INSERT INTO movies VALUES(DEFAULT, '{$name}', '{$director}', {$release_date}, '{$lead_actors}', '{$supporting_actors}');";
+        $conn->query($sql);
+    }
 ?>
