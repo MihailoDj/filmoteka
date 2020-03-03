@@ -18,7 +18,7 @@
         <form action="">
             <div class="textbox">
                 <i class="fas fa-search"></i>
-                <input type="search" name="search" id="search" placeholder="Ime filma, autora. . .">
+                <input type="search" name="search" id="search" placeholder="Ime filma, autora. . ." autofocus>
             </div>
             <input type="button" class="btn" value="Pretrazi">
         </form>

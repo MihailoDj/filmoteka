@@ -19,7 +19,6 @@
             $sql = "INSERT INTO users VALUES(DEFAULT, '{$username}', '{$hashed_password}', 2);";
 
             if ($conn->query($sql)) {
-                echo("Uspesna registracija!");
                 echo('<script type="text/javascript">location.href = \'login.php\';</script>');
             } else {
                 echo("Neuspesna registracija.");
@@ -40,8 +39,11 @@
             echo("Pogresno korisnicko ime");
         } else {
             if (password_verify($password, $result->fetch_object()->password)) {
-                echo("Dobrodosao, {$username}");
-                echo('<script type="text/javascript">location.href = \'index.php\';</script>');
+                if ($username == "admin@filmoteka.com") {
+                    echo('<script type="text/javascript">location.href = \'admin_panel.php\';</script>');
+                } else {
+                    echo('<script type="text/javascript">location.href = \'index.php\';</script>');
+                }
             } else {
                 echo("Pogresna lozinka.");
             }

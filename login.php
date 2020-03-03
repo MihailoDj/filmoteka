@@ -12,7 +12,7 @@
         <form action="" method="">
             <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="Korisnicko ime">
+                <input type="text" name="username" id="username" placeholder="Korisnicko ime" autofocus>
             </div>
 
             <div class="textbox">
