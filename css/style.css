@@ -1,5 +1,9 @@
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
 
+root {
+  --main: #4caf50;
+}
+
 html {
     margin:0;
     padding:0;
@@ -14,12 +18,11 @@ body {
 .navbar {
     overflow: hidden;
     background-color: black;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   
-  /* Links inside the navbar */
   .navbar a {
     float: right;
     display: block;
@@ -49,7 +52,7 @@ body {
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
-    border-bottom: 1px solid #4caf50;
+    border-bottom: 1px solid var(--main);
   }
   .textbox i{
     width: 26px;
@@ -69,7 +72,7 @@ body {
   .btn{
     width: 100%;
     background: none;
-    border: 2px solid #4caf50;
+    border: 2px solid var(--main);
     color: white;
     padding: 5px;
     font-size: 18px;
