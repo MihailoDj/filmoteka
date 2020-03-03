@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmoteka - login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 </head>
 <body>
     <div class="login-box">

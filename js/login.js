@@ -1,11 +1,13 @@
-document.querySelector('.btn').addEventListener('click', login);
+document.querySelector('.btn').addEventListener('click', () => {
+    login();
+});
 
-document.addEventListener("keypress", e => {
-    var key = e.which || e.keyCode;
-    if (key === 13) {
-      login();
+document.querySelector('.btn').addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        login();
     }
-  });
+});
 
 function login() {
     let user = {

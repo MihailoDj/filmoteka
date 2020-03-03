@@ -1,8 +1,15 @@
 document.querySelector('.btn').addEventListener('click', () => {
-    addUser();
+    register();
 });
 
-function addUser() {
+document.querySelector('.btn').addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        register();
+    }
+});
+
+function register() {
     let user = {
         username: $("#username").val(),
         password: $("#password").val()
