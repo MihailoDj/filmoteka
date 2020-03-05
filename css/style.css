@@ -1,81 +1,140 @@
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
 
 :root {
-  --main: #4caf50;
+  --main: #fffb00;
 }
 
 html {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    background-color: #333;
+  margin: 0px;
+  background-image: url("http://awesomenator.com/content/2011/11/yellow-same-posters.jpg");
+  background-color: white;
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  overflow: hidden;
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
   
-  .navbar a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
 
-  .login-box{
-    width: 280px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-  }
-  .login-box h1{
-    font-size: 40px;
-    margin-bottom: 50px;
-    padding: 13px 0;
-    text-align: center;
-  }
-  .textbox{
-    width: 100%;
-    overflow: hidden;
-    font-size: 20px;
-    padding: 8px 0;
-    margin: 8px 0;
-    border-bottom: 1px solid var(--main);
-  }
-  .textbox i{
-    width: 26px;
-    float: left;
-    text-align: center;
-  }
-  .textbox input{
-    border: none;
-    outline: none;
-    background: none;
-    color: white;
-    font-size: 18px;
-    width: 80%;
-    float: left;
-    margin: 0 10px;
-  }
-  .btn{
-    width: 100%;
-    background: none;
-    border: 2px solid var(--main);
-    color: white;
-    padding: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 12px 0;
-  }
+.navbar a:hover {
+  color: var(--main);
+  transform: scale(1.05);
+}
+
+.registerLink {
+  text-align: center;
+}
+
+a {
+  color: var(--main);
+}
+
+a:visited {
+  color: var(--main);
+}
+
+.form-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1rem 1.5rem;
+  background-color: #222;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 10px var(--main);
+}
+.form-wrapper h1{
+  font-size: 40px;
+  margin-bottom: 50px;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid var(--main);
+}
+.textbox i{
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+.textbox input{
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+  caret-color: var(--main);
+}
+
+
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn{
+  width: 70%;
+  border: 2px solid var(--main);
+  background-color: var(--main);
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 12px 0;
+  border-radius: 2rem;
+  
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px var(--main);
+}
+
+#movies-table {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  height: 4rem;
+  text-align: left;
+  vertical-align: center;
+}
+
+th, td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--main);
+}
