@@ -8,15 +8,11 @@
     <link rel="stylesheet" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 </head>
 <body>
-    <div class="navbar">
-        <a href="login.php">Izloguj se</a>
-        <a href="settings.php">Podesavanja naloga</a>
-        <a href="add_movie.php">Dodaj film</a>
-        <a href="view_movies.php">Pregled filmova</a>
-        <a href="admin_panel.php">Pocetna</a>
-    </div>
+    <?php
+        include 'navbar_admin.php';
+    ?>
 
-    <div class="login-box">
+    <div class="form-wrapper">
         <h1>Dodaj film</h1>
         <form action="">
             <div class="textbox">
@@ -34,7 +30,10 @@
             <div class="textbox">
                 <input type="text" name="supporting_actors" id="supporting_actors" placeholder="Sporedne uloge">
             </div>
-            <input type="button" class="btn" value="Dodaj">
+            <div class="btn-wrapper">
+                <input type="button" class="btn" value="Dodaj">
+            </div>
+            
         </form>
     </div>
     <div class="rezultat"></div>

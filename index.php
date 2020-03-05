@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 </head>
 <body>
-    <div class="navbar">
-        <a href="login.php">Izloguj se</a>
-        <a href="settings.php">Podesavanja naloga</a>
-    </div>
+    <?php
+        include 'navbar_user.php';
+    ?>
 
-    <div class="login-box">
+    <div class="form-wrapper">
         <h1>Pronadji film</h1>
         <form action="">
             <div class="textbox">
                 <i class="fas fa-search"></i>
                 <input type="search" name="search" id="search" placeholder="Ime filma, autora. . ." autofocus>
             </div>
-            <input type="button" class="btn" value="Pretrazi">
+            <div class="btn-wrapper">
+                <input type="button" class="btn" value="Pretrazi">
+            </div>
         </form>
     </div>
 

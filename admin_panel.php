@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 </head>
 <body>
-    <div class="navbar">
-        <a href="login.php">Izloguj se</a>
-        <a href="settings.php">Podesavanja naloga</a>
-        <a href="add_movie.php">Dodaj film</a>
-        <a href="view_movies.php">Pregled filmova</a>
-    </div>
+    <?php
+        include 'navbar_admin.php';
+    ?>
 
     <div class="rezultat"></div>
 
