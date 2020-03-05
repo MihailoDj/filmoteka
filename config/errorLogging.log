@@ -1,2 +1,30 @@
 [28-Feb-2020 16:13:49 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 32
 [28-Feb-2020 16:13:49 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 33
+[03-Mar-2020 18:03:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:04:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:06:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:06:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:08:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:11:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[03-Mar-2020 18:12:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Movie' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71

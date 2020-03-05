@@ -4,6 +4,8 @@
    ini_set("log_errors", true);
    ini_set("error_log", "errorLogging.log");
 
+   include 'Movie.php';
+
    $conn = new Mysqli('localhost', 'root', '', 'filmoteka');
 
    if ($conn->connect_errno) {

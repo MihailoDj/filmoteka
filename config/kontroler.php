@@ -60,4 +60,29 @@
         $sql = "INSERT INTO movies VALUES(DEFAULT, '{$name}', '{$director}', {$release_date}, '{$lead_actors}', '{$supporting_actors}');";
         $conn->query($sql);
     }
+
+    if ($operacija == "RETURN_MOVIES") {
+        $sql = "SELECT movieID, name, director, releaseDate FROM movies";
+
+        $result_set = $conn -> query($sql);
+        $movies = [];
+
+        while ($red = $result_set->fetch_object()) {
+            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate);
+            $movies[] = $movie;
+        }
+
+        echo json_encode($movies);
+    }
+
+    if($operacija == 'DELETE_MOVIE'){
+        $id = trim($_GET['id']);
+    
+        $sql = "DELETE FROM movies WHERE movieID =" . $id;
+        if($conn->query($sql)){
+            echo 'USPESNO IZBRISAN FILM';
+        }else{
+            echo 'DOSLO JE DO GRESKE';
+        }
+    }
 ?>
