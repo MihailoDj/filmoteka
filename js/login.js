@@ -1,13 +1,4 @@
-document.querySelector('.btn').addEventListener('click', () => {
-    login();
-});
-
-document.querySelector('.btn').addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        login();
-    }
-});
+document.querySelector('.btn').addEventListener('click', login);
 
 function login() {
     let user = {

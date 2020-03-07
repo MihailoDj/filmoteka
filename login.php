@@ -31,5 +31,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/login.js"></script>
+    <script>
+        window.addEventListener("keypress", e => {
+            var key = e.which || e.keyCode;
+            if (key === 13) {
+                login();
+            }
+        });
+    </script>
 </body>
 </html>
