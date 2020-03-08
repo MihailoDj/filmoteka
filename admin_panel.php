@@ -12,8 +12,9 @@
         include 'navbar_admin.php';
     ?>
 
-    <div class="rezultat"></div>
+    <div id="tabela" class="form-wrapper"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/return_users.js"></script>
 </body>
 </html>

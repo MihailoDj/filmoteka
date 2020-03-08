@@ -5,6 +5,7 @@
    ini_set("error_log", "errorLogging.log");
 
    include 'Movie.php';
+   include 'User.php';
 
    $conn = new Mysqli('localhost', 'root', '', 'filmoteka');
 

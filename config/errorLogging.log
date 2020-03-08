@@ -28,3 +28,19 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[08-Mar-2020 23:26:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'User' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:85
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 85
+[08-Mar-2020 23:26:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'User' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:85
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 85
+[08-Mar-2020 23:26:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'User' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:85
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 85
+[08-Mar-2020 23:27:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'User' not found in C:\xampp\htdocs\filmoteka\config\kontroler.php:85
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 85

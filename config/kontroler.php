@@ -75,6 +75,20 @@
         echo json_encode($movies);
     }
 
+    if ($operacija == "RETURN_USERS") {
+        $sql = "SELECT id, username, roleName FROM users u JOIN roles r ON u.roleID = r.roleID";
+
+        $result_set = $conn -> query($sql);
+        $users = [];
+
+        while ($red = $result_set->fetch_object()) {
+            $user = new User($red->id, $red->username, $red->roleName);
+            $users[] = $user;
+        }
+
+        echo json_encode($users);
+    }
+
     if($operacija == 'DELETE_MOVIE'){
         $id = trim($_GET['id']);
     
