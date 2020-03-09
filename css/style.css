@@ -123,13 +123,13 @@ a:visited {
   left: 50%;
   transform: translate(-50%,-50%);
   width: 80%;
-  margin-top: 25%;
+  margin-top: 10%;
   text-align: center;
 }
 
 #movies-table .movie-card {
-  width: 15rem;
-  height: 20rem;
+  width: 12rem;
+  height: 18rem;
   border: 1px solid var(--main);
   display: inline-block;
   margin: 1rem 1rem;
@@ -144,13 +144,16 @@ a:visited {
 }
 
 .movie-card .btn{
-  margin-top: 16rem;
+  position: relative;
+  margin-top: 14rem;
   width: 40%;
 }
 
 table {
   border-collapse: collapse;
 }
+
+
 
 th {
   height: 4rem;
@@ -161,4 +164,28 @@ th {
 th, td {
   padding: 0.5rem;
   border-bottom: 1px solid var(--main);
+}
+
+tbody {
+  color: #333;
+}
+
+#users-table_wrapper {
+  background-color: #222;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px black;
+  width: 26rem;
+  height: 34rem;
+}
+
+#users-table_length, #users-table_filter,
+#users-table_info, #users-table_paginate {
+  color: white !important;
 }

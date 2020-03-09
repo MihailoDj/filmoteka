@@ -30,7 +30,7 @@ function deleteMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=DELETE_MOVIE&id=' + id,
         success: function(data) {
-            $("rezultatBrisanja").html(data);
+            $("#rezultatBrisanja").html(data);
             fillMoviesTable();
         }
     })
