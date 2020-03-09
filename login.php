@@ -30,14 +30,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/login.js"></script>
-    <script>
-        window.addEventListener("keypress", e => {
-            var key = e.which || e.keyCode;
-            if (key === 13) {
-                login();
-            }
-        });
-    </script>
+    <script src="js/login.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>

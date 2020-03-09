@@ -2,6 +2,13 @@ document.querySelector('.btn').addEventListener('click', () => {
     add_movie();
 });
 
+window.addEventListener("keypress", e => {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        add_movie();
+    }
+});
+
 
 function add_movie() {
     let movie = {

@@ -23,6 +23,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 99;
+  border-bottom: 1px solid var(--main);
 }
   
 .navbar a {
@@ -118,12 +119,11 @@ a:visited {
 
 #movies-table {
   color: white;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 80%;
-  margin-top: 10rem;
+  margin-top: 25%;
   text-align: center;
 }
 

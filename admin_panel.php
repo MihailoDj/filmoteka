@@ -15,6 +15,6 @@
     <div id="tabela" class="form-wrapper"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/return_users.js"></script>
+    <script src="js/return_users.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>

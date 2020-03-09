@@ -2,6 +2,13 @@ document.querySelector('.btn').addEventListener('click', () => {
     register();
 });
 
+window.addEventListener("keypress", e => {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        register();
+    }
+});
+
 function register() {
     let user = {
         username: $("#username").val(),
