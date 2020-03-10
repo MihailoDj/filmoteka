@@ -12,7 +12,7 @@
         include 'navbar_admin.php';
     ?>
 
-    <div id="movies-table" class="form-wrapper"></div>
+    <div id="movies-table"></div>
     <h3 id="rezultatBrisanja"></h3>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

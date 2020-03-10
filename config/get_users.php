@@ -8,7 +8,6 @@
     $table = "users";
     $primaryKey = 'id';
     
-    // Niz sa nazivima kolona iz baze. Prvi niz dodaje id atribut u svaki <tr>
     $columns = array(
     array(
             'db' => 'id',
@@ -22,16 +21,12 @@
         array( 'db' => 'roleID',   'dt' => 2 ),
     );
     
-    // SQL server connection information
     $sql_details = array(
         'user' => $db_user,
         'pass' => $db_pass,
         'db'   => $db_db,
         'host' => $db_server
     );
-    
-    
-    //Treba postaviti putanju do ssp.class.php (proveriti folder gde se nalazi DataTables)
     
     require( 'ssp.class.php' );
     

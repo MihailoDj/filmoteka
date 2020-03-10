@@ -1,5 +1,3 @@
-
-
 $(document).ready( function () {
     $('#users-table').DataTable({
         "columns": [
@@ -9,7 +7,8 @@ $(document).ready( function () {
            ],
         "ajax": "./config/get_users.php",
         "processing": true,
-        "serverSide": true
+        "serverSide": true,
+        "lengthMenu": [10],
        });
 
     $('#users-table').addClass("display");
