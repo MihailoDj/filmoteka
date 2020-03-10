@@ -44,3 +44,58 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 85
+[10-Mar-2020 21:48:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type Movie as array in C:\xampp\htdocs\filmoteka\config\kontroler.php:75
+Stack trace:
+#0 [internal function]: {closure}(Object(Movie), Object(Movie))
+#1 C:\xampp\htdocs\filmoteka\config\kontroler.php(78): usort(Array, Object(Closure))
+#2 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 75
+[10-Mar-2020 21:48:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type Movie as array in C:\xampp\htdocs\filmoteka\config\kontroler.php:75
+Stack trace:
+#0 [internal function]: {closure}(Object(Movie), Object(Movie))
+#1 C:\xampp\htdocs\filmoteka\config\kontroler.php(78): usort(Array, Object(Closure))
+#2 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 75
+[10-Mar-2020 21:48:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type Movie as array in C:\xampp\htdocs\filmoteka\config\kontroler.php:75
+Stack trace:
+#0 [internal function]: {closure}(Object(Movie), Object(Movie))
+#1 C:\xampp\htdocs\filmoteka\config\kontroler.php(78): usort(Array, Object(Closure))
+#2 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 75
+[10-Mar-2020 21:49:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type Movie as array in C:\xampp\htdocs\filmoteka\config\kontroler.php:75
+Stack trace:
+#0 [internal function]: {closure}(Object(Movie), Object(Movie))
+#1 C:\xampp\htdocs\filmoteka\config\kontroler.php(78): usort(Array, Object(Closure))
+#2 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 75
+[10-Mar-2020 21:49:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type Movie as array in C:\xampp\htdocs\filmoteka\config\kontroler.php:75
+Stack trace:
+#0 [internal function]: {closure}(Object(Movie), Object(Movie))
+#1 C:\xampp\htdocs\filmoteka\config\kontroler.php(78): usort(Array, Object(Closure))
+#2 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 75
+[10-Mar-2020 21:53:27 Europe/Berlin] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) or const (T_CONST) in C:\xampp\htdocs\filmoteka\config\Movie.php on line 32
+[10-Mar-2020 22:32:56 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:32:56 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:32:56 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:32:56 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26
+[10-Mar-2020 22:33:07 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:33:07 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:33:07 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:33:07 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26
+[10-Mar-2020 22:33:09 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:33:09 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:33:09 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:33:09 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26
+[10-Mar-2020 22:33:14 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:33:14 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:33:14 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:33:14 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26
+[10-Mar-2020 22:33:58 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:33:58 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:33:58 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:33:58 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26
+[10-Mar-2020 22:34:12 Europe/Berlin] PHP Notice:  Undefined variable: db_user in C:\xampp\htdocs\filmoteka\config\get_users.php on line 23
+[10-Mar-2020 22:34:12 Europe/Berlin] PHP Notice:  Undefined variable: db_pass in C:\xampp\htdocs\filmoteka\config\get_users.php on line 24
+[10-Mar-2020 22:34:12 Europe/Berlin] PHP Notice:  Undefined variable: db_db in C:\xampp\htdocs\filmoteka\config\get_users.php on line 25
+[10-Mar-2020 22:34:12 Europe/Berlin] PHP Notice:  Undefined variable: db_server in C:\xampp\htdocs\filmoteka\config\get_users.php on line 26

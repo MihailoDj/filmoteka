@@ -11,6 +11,7 @@ function fillMoviesTable() {
                     })
                     .then((rs) => {
                         img_src = rs.results[0].poster_path;
+                        //obradi slucaj kad je img_src undefined
 
                         output+='<div class="movie-card" style="background-image: url(\'https://image.tmdb.org/t/p/w185/'+img_src+'\');">';
                         output += '<button type="button" class="btn" onclick="deleteMovie('+ red.movieID + ')"><i class="fa fa-trash"></i></button>';

@@ -71,7 +71,6 @@
             $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate);
             $movies[] = $movie;
         }
-
         echo json_encode($movies);
     }
 
