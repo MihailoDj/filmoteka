@@ -2,9 +2,15 @@
 
 :root {
   --main: #fffb00;
+  --light: #f4f4f4;
+  --dark: #222;
 }
 
 html {
+  scroll-behavior: smooth;
+}
+
+* {
   margin:0;
   padding:0;
   box-sizing: border-box;
@@ -13,23 +19,23 @@ html {
 body {
   margin: 0px;
   background-image: url("../img/bg.jpg");
-  background-color: white;
+  background-color: var(--light);
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #222;
+  background-color: var(--dark);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 3;
   border-bottom: 1px solid var(--main);
 }
   
 .navbar a {
   float: right;
   display: block;
-  color: #f2f2f2;
+  color: var(--light);
   text-align: center;
   padding: 1rem 1rem;
   text-decoration: none;
@@ -38,6 +44,60 @@ body {
 .navbar a:hover {
   color: var(--main);
   transform: scale(1.05);
+}
+
+.menu {
+  color: var(--main);
+  float: left;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.menu:hover {
+  cursor:pointer;
+}
+
+/*Side-nav*/
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  background-color: var(--dark);
+  overflow: hidden;
+  opacity: 0.96;
+  z-index: 99;
+}
+
+.side-nav a {
+  padding: 7px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: var(--light);
+  display: block;
+  transition: all 0.3s;
+  margin-top: .8rem;
+  white-space: nowrap;
+}
+.side-nav a:hover, .side-nav .btn-close:hover {
+  color: var(--main);
+  cursor: pointer;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right:22px;
+  font-size: 36px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  animation: fade-in 1s forwards;
+  background-color: var(--dark);
+  border: none;
+  color: var(--light);
 }
 
 .registerLink {
@@ -50,6 +110,27 @@ a {
 
 a:visited {
   color: var(--main);
+}
+
+.btn-back-to-top {
+  display: none;
+  position: fixed; 
+  bottom: 20px;
+  right: 10px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  color: var(--main);
+  background-color: var(--dark); 
+  cursor: pointer; 
+  padding: 1.2rem; 
+  border-radius: 50%; 
+  font-size: 1rem;
+  box-shadow: 0 0 15px 1px var(--main);
+}
+
+.btn-back-to-top:hover {
+  transform: scale(1.05);
 }
 
 .form-wrapper{
@@ -94,8 +175,6 @@ a:visited {
   caret-color: var(--main);
 }
 
-
-
 .btn-wrapper {
   text-align: center;
 }
@@ -109,7 +188,6 @@ a:visited {
   cursor: pointer;
   margin: 12px 0;
   border-radius: 2rem;
-  
 }
 
 .btn:hover {
@@ -181,12 +259,48 @@ tbody {
   padding: 1rem;
   margin-top: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 10px 5px black;
+  box-shadow: 0 0 10px 5px var(--main);
+  height: 36rem;
   width: 26rem;
-  height: 34rem;
 }
 
 #users-table_length, #users-table_filter,
 #users-table_info, #users-table_paginate {
   color: white !important;
+}
+
+/*KEYFRAMES*/
+@keyframes fade-in{
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 760px) {
+  nav {
+      height: 6rem;
+  }
+
+  .menu {
+      transform: scale(1.1);
+      margin-top: 0.5rem;
+  }
+  .menu:hover {
+      transform: scale(1.2);
+  }
+
+  .navbar a {
+      display: none;
+  }
+}
+
+@media(min-width: 761px) {
+  .menu {
+      display: none;
+  }
+  
 }
