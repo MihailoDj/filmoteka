@@ -17,7 +17,7 @@ function fillMoviesTable() {
                             img_src = "./img/question_mark.jpg";
                         }
 
-                        output+='<div class="movie-card" style="background-image: url('+img_src+');">';
+                        output+='<div class="movie-card" onclick="showMovie('+red.movieID+')" style="background-image: url('+img_src+');">';
                         output += '<button type="button" class="btn" onclick="deleteMovie('+ red.movieID + ')"><i class="fa fa-trash"></i></button>';
                         output += '</div>';
 
@@ -35,8 +35,33 @@ function deleteMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=DELETE_MOVIE&id=' + id,
         success: function(data) {
-            $("#rezultatBrisanja").html(data);
             fillMoviesTable();
         }
     })
 }
+
+function showMovie(id) {
+    $.ajax({
+        url: 'config/kontroler.php?metoda=GET_MOVIE&id=' + id,
+        success: function(data) {
+            let red = JSON.parse(data);
+
+            $("#name").val(red.name);
+            $("#director").val(red.director);
+            $("#release_date").val(red.releaseDate);
+            $("#lead_actors").val(red.leadActors);
+            $("#supporting_actors").val(red.supportingActors);
+        }
+    })
+    modal.style.display = "block";
+}
+
+document.querySelector('.close').addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", e => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+      }
+});

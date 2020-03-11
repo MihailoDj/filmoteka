@@ -4,30 +4,22 @@
         private $name;
         private $director;
         private $releaseDate;
+        private $leadActors;
+        private $supportingActors;
 
-        public function __construct($movieID, $name, $director, $releaseDate) {
+        public function __construct($movieID, $name, $director, $releaseDate, $leadActors, $supportingActors) {
             $this->movieID = $movieID;
             $this->name = $name;
             $this->director = $director;
             $this->releaseDate = $releaseDate;
+            $this->leadActors = $leadActors;
+            $this->supportingActors = $supportingActors;
         }
 
         public function jsonSerialize() {
             $vars = get_object_vars($this);
 
             return $vars;
-        }
-
-        public function __get($name) {
-            if (property_exists($this, $name)) {
-              return $this->$name;
-            }
-          }
-        
-          public function __set($name, $value) {
-            if (property_exists($this, $name)) {
-              $this->$name = $value;
-            }
         }
     }
 ?>

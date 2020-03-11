@@ -68,7 +68,7 @@
         $movies = [];
 
         while ($red = $result_set->fetch_object()) {
-            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate);
+            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->suppportingActors);
             $movies[] = $movie;
         }
         echo json_encode($movies);
@@ -86,6 +86,19 @@
         }
 
         echo json_encode($users);
+    }
+
+    if ($operacija == "GET_MOVIE") {
+        $id = trim($_GET['id']);
+        $sql = "SELECT * FROM movies WHERE movieID={$id}";
+
+        $result_set = $conn -> query($sql);
+
+        while ($red = $result_set -> fetch_object()) {
+            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
+        }
+
+        echo json_encode($movie);
     }
 
     if($operacija == 'DELETE_MOVIE'){

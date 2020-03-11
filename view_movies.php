@@ -13,6 +13,37 @@
     ?>
 
     <div id="movies-table"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <div class="">
+                <h1>Izmeni podatke o filmu</h1>
+                <form action="">
+                    <div class="textbox">
+                        <input type="text" name="name" id="name" placeholder="Naziv filma" autofocus>
+                    </div>
+                    <div class="textbox">
+                        <input type="text" name="director" id="director" placeholder="Reziser">
+                    </div>
+                    <div class="textbox">
+                        <input type="number" name="release_date" id="release_date" placeholder="Godina izdanja">
+                    </div>
+                    <div class="textbox">
+                        <input type="text" name="lead_actors" id="lead_actors" placeholder="Glavne uloge">
+                    </div>
+                    <div class="textbox">
+                        <input type="text" name="supporting_actors" id="supporting_actors" placeholder="Sporedne uloge">
+                    </div>
+                    <div class="btn-wrapper">
+                        <input type="button" id="btn-update" class="btn" value="Izmeni">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
     <h3 id="rezultatBrisanja"></h3>
     <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
 
