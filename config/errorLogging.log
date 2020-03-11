@@ -541,3 +541,15 @@ Stack trace:
 [11-Mar-2020 22:29:02 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$supportingActors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
 [11-Mar-2020 22:29:02 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$leadActors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
 [11-Mar-2020 22:29:02 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$supportingActors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[11-Mar-2020 23:22:45 Europe/Berlin] PHP Notice:  Undefined index: release_date in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 108
+[11-Mar-2020 23:22:45 Europe/Berlin] PHP Notice:  Undefined index: lead_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 109
+[11-Mar-2020 23:22:45 Europe/Berlin] PHP Notice:  Undefined index: supporting_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 110
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: release_date in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 108
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: lead_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 109
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: supporting_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 110
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: release_date in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 108
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: lead_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 109
+[11-Mar-2020 23:22:57 Europe/Berlin] PHP Notice:  Undefined index: supporting_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 110
+[11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: release_date in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 108
+[11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: lead_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 109
+[11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: supporting_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 110

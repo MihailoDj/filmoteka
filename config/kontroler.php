@@ -62,7 +62,7 @@
     }
 
     if ($operacija == "RETURN_MOVIES") {
-        $sql = "SELECT * FROM movies";
+        $sql = "SELECT * FROM movies ORDER BY name ASC";
 
         $result_set = $conn -> query($sql);
         $movies = [];
@@ -99,6 +99,20 @@
         }
 
         echo json_encode($movie);
+    }
+
+    if ($operacija == "UPDATE_MOVIE") {
+        $movieID = trim($_POST["movieID"]);
+        $name = trim($_POST["name"]);
+        $director = trim($_POST["director"]);
+        $release_date = trim($_POST["release_date"]);
+        $lead_actors = trim($_POST["lead_actors"]);
+        $supporting_actors = trim($_POST["supporting_actors"]);
+
+        $sql="UPDATE movies SET name='{$name}', director='{$director}', releaseDate={$release_date}, 
+            leadActors='{$lead_actors}', supportingActors='{$supporting_actors}' WHERE movieID={$movieID}";
+
+        $conn->query($sql);
     }
 
     if($operacija == 'DELETE_MOVIE'){

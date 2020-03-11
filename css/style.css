@@ -152,8 +152,9 @@ a:visited {
   margin: 10% auto;
   padding: 20px;
   border: 1px solid var(--main);
-  width: 30%;
+  width: 20rem;
   border-radius: 1rem;
+  text-align: center;
 }
 
 .close {

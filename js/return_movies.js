@@ -44,17 +44,39 @@ function showMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=GET_MOVIE&id=' + id,
         success: function(data) {
-            let red = JSON.parse(data);
+            let movie = JSON.parse(data);
 
-            $("#name").val(red.name);
-            $("#director").val(red.director);
-            $("#release_date").val(red.releaseDate);
-            $("#lead_actors").val(red.leadActors);
-            $("#supporting_actors").val(red.supportingActors);
+            $("#name").val(movie.name);
+            $("#director").val(movie.director);
+            $("#release_date").val(movie.releaseDate);
+            $("#lead_actors").val(movie.leadActors);
+            $("#supporting_actors").val(movie.supportingActors);
+
+            document.querySelector('#btn-update').addEventListener("click", e => {
+                e.preventDefault();
+                let m = {
+                    movieID: movie.movieID,
+                    name: $("#name").val(),
+                    director: $("#director").val(),
+                    release_date: $("#release_date").val(),
+                    lead_actors: $("#lead_actors").val(),
+                    supporting_actors: $("#supporting_actors").val()
+                }
+
+                $.ajax({
+                    url: 'config/kontroler.php?metoda=UPDATE_MOVIE',
+                    type: 'POST',
+                    data: m,
+                    success: function() {
+                        modal.style.display="none";
+                    }
+                })
+            });
         }
     })
     modal.style.display = "block";
 }
+
 
 document.querySelector('.close').addEventListener("click", () => {
     modal.style.display = "none";
