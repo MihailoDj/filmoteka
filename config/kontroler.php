@@ -119,10 +119,6 @@
         $id = trim($_GET['id']);
     
         $sql = "DELETE FROM movies WHERE movieID =" . $id;
-        if($conn->query($sql)){
-            echo 'USPESNO IZBRISAN FILM';
-        }else{
-            echo 'DOSLO JE DO GRESKE';
-        }
+        $conn->query($sql);
     }
 ?>

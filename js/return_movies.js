@@ -17,9 +17,10 @@ function fillMoviesTable() {
                             img_src = "./img/question_mark.jpg";
                         }
 
-                        output+='<div class="movie-card" onclick="showMovie('+red.movieID+')" style="background-image: url('+img_src+');">';
-                        output += '<button type="button" class="btn" onclick="deleteMovie('+ red.movieID + ')"><i class="fa fa-trash"></i></button>';
-                        output += '</div>';
+                        output+='<div class="movie-card" style="background-image: url('+img_src+');">';
+                        output+='<button type="button" class="btn" onclick="showMovie('+red.movieID+')" style="margin-top:12rem;"><i class="fas fa-info"></i></button>';
+                        output+='<button type="button" class="btn" onclick="deleteMovie('+red.movieID+')"><i class="fa fa-trash"></i></button>';
+                        output+='</div>';
 
                         document.querySelector('#movies-table').innerHTML = output;
                     });
@@ -53,7 +54,6 @@ function showMovie(id) {
             $("#supporting_actors").val(movie.supportingActors);
 
             document.querySelector('#btn-update').addEventListener("click", e => {
-                e.preventDefault();
                 let m = {
                     movieID: movie.movieID,
                     name: $("#name").val(),
