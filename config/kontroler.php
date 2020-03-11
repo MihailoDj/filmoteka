@@ -68,7 +68,7 @@
         $movies = [];
 
         while ($red = $result_set->fetch_object()) {
-            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->suppportingActors);
+            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
             $movies[] = $movie;
         }
         echo json_encode($movies);
