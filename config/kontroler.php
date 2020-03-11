@@ -62,7 +62,7 @@
     }
 
     if ($operacija == "RETURN_MOVIES") {
-        $sql = "SELECT movieID, name, director, releaseDate FROM movies";
+        $sql = "SELECT * FROM movies";
 
         $result_set = $conn -> query($sql);
         $movies = [];
