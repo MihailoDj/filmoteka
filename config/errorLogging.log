@@ -553,3 +553,31 @@ Stack trace:
 [11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: release_date in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 108
 [11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: lead_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 109
 [11-Mar-2020 23:22:58 Europe/Berlin] PHP Notice:  Undefined index: supporting_actors in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 110
+[02-Aug-2020 22:06:40 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 57
+[02-Aug-2020 22:06:40 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 58
+[02-Aug-2020 22:06:40 Europe/Berlin] PHP Notice:  Undefined variable: result_set in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:06:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on null in C:\xampp\htdocs\filmoteka\config\kontroler.php:62
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:06:42 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 57
+[02-Aug-2020 22:06:42 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 58
+[02-Aug-2020 22:06:42 Europe/Berlin] PHP Notice:  Undefined variable: result_set in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:06:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on null in C:\xampp\htdocs\filmoteka\config\kontroler.php:62
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:06:51 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 57
+[02-Aug-2020 22:06:51 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 58
+[02-Aug-2020 22:06:51 Europe/Berlin] PHP Notice:  Undefined variable: result_set in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:06:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on null in C:\xampp\htdocs\filmoteka\config\kontroler.php:62
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:07:20 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 57
+[02-Aug-2020 22:07:20 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 58
+[02-Aug-2020 22:07:20 Europe/Berlin] PHP Notice:  Undefined variable: result_set in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[02-Aug-2020 22:07:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on null in C:\xampp\htdocs\filmoteka\config\kontroler.php:62
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
