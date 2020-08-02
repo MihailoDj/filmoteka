@@ -26,6 +26,12 @@ function add_movie() {
         success: function(data) {
             $("#rezultat").html(data);
             $("#rezultat").css("text-align", "center");
+
+            $("#name").val('');
+            $("#director").val('');
+            $("#release_date").val('');
+            $("#lead_actors").val('');
+            $("#supporting_actors").val('');
         }
     })
 }

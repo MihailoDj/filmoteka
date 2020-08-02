@@ -24,7 +24,7 @@
                 echo("Neuspesna registracija.");
             }
         } else {
-            echo("Korisniko ime je zauzeto!");
+            echo("Korisnicko ime je zauzeto!");
         }
     }
 
