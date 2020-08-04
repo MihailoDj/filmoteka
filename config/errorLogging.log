@@ -581,3 +581,5 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 62
+[04-Aug-2020 22:13:04 Europe/Berlin] PHP Notice:  Undefined variable: user in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71
+[04-Aug-2020 22:13:24 Europe/Berlin] PHP Notice:  Undefined variable: user in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 71

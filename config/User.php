@@ -2,12 +2,14 @@
     class User implements JsonSerializable {
         private $id;
         private $username;
-        private $roleName;
+        private $roleID;
+        private $password;
 
-        public function __construct($id, $username, $roleName) {
+        public function __construct($id, $username, $password, $roleID) {
             $this->id = $id;
             $this->username = $username;
-            $this->roleName = $roleName;
+            $this->roleID = $roleID;
+            $this->password = $password;
         }
 
         public function jsonSerialize() {

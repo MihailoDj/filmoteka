@@ -29,8 +29,13 @@
     }
 
     if ($operacija == "LOGIN") {
+        session_start();
+
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
+
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
 
         $sql = "SELECT * FROM users WHERE username='{$username}'";
         $result = $conn->query($sql);
@@ -48,6 +53,43 @@
                 echo("Pogresna lozinka.");
             }
         }
+    }
+
+    if ($operacija == "GET_USER") {
+        session_start();
+
+        $username = $_SESSION['username'];
+        $password = $_SESSION['password'];
+
+        $sql = "SELECT * FROM users WHERE username = '{$username}'";
+        $result_set = $conn -> query($sql);
+
+        while ($red = $result_set -> fetch_object()) {
+            $user = new User($red->id, $red->username, $password, $red->roleID);
+        }$result_set = $conn -> query($sql);
+
+        echo json_encode($user);
+    }
+
+    if ($operacija == "UPDATE_USER") {
+        session_start();
+
+        $old_username = $_SESSION['username'];
+
+        $new_username = trim($_POST["username"]);
+        $new_password = trim($_POST["password"]);
+        $new_password_hashed = password_hash($new_password, PASSWORD_DEFAULT);
+
+        $sql="UPDATE users SET username='{$new_username}', password='{$new_password_hashed}' WHERE username='{$old_username}'";
+
+        $conn->query($sql);
+
+        $_SESSION['username'] = $new_username;
+        $_SESSION['password'] = $new_password;
+    }
+
+    if ($operacija == "LOG_OUT") {
+        session_abort();
     }
 
     if ($operacija == "ADD_MOVIE") {
@@ -72,20 +114,6 @@
             $movies[] = $movie;
         }
         echo json_encode($movies);
-    }
-
-    if ($operacija == "RETURN_USERS") {
-        $sql = "SELECT id, username, roleName FROM users u JOIN roles r ON u.roleID = r.roleID";
-
-        $result_set = $conn -> query($sql);
-        $users = [];
-
-        while ($red = $result_set->fetch_object()) {
-            $user = new User($red->id, $red->username, $red->roleName);
-            $users[] = $user;
-        }
-
-        echo json_encode($users);
     }
 
     if ($operacija == "GET_MOVIE") {
