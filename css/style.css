@@ -243,7 +243,9 @@ a:visited {
   box-shadow: 0 0 20px 10px var(--main);
   margin: auto;
   margin-top: 10rem;
+  margin-bottom: 2rem;
 }
+
 
 #movies-table .movie-card {
   width: 12rem;
@@ -263,7 +265,9 @@ a:visited {
 
 .movie-card .btn{
   position: relative;
-  width: 40%;
+  border-radius: 50%;
+  width: 20%;
+  border: 2px solid black;
 }
 
 table {

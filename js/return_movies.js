@@ -18,7 +18,7 @@ function fillMoviesTable() {
                         }
 
                         output+='<div class="movie-card" style="background-image: url('+img_src+');">';
-                        output+='<button type="button" class="btn" onclick="showMovie('+red.movieID+')" style="margin-top:12rem;"><i class="fas fa-info"></i></button>';
+                        output+='<button type="button" class="btn" onclick="showMovie('+red.movieID+')" style="margin-top:14rem;"><i class="fas fa-info"></i></button>';
                         output+='<button type="button" class="btn" onclick="deleteMovie('+red.movieID+')"><i class="fa fa-trash"></i></button>';
                         output+='</div>';
 

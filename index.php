@@ -25,8 +25,11 @@
         </form>
     </div>
 
+    <div id="movies-table" class="search-movies-table" style="display:none;"></div>
+
     <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/search_movies.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>
