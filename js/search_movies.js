@@ -49,8 +49,31 @@ function search_movies() {
 }
 
 function showMovie(id) {
+    $.ajax({
+        url: 'config/kontroler.php?metoda=GET_MOVIE&id=' + id,
+        success: function(data) {
+            let movie = JSON.parse(data);
 
+            $("#name").val(movie.name);
+            $("#director").val(movie.director);
+            $("#release_date").val(movie.releaseDate);
+            $("#lead_actors").val(movie.leadActors);
+            $("#supporting_actors").val(movie.supportingActors);
+
+        }
+    })
+    modal.style.display = "block";
 }
+
+document.querySelector('.close').addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", e => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+      }
+});
 
 function addMovie(id) {
 

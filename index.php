@@ -27,6 +27,38 @@
 
     <div id="movies-table" class="search-movies-table" style="display:none;"></div>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <div class="" style="text-align: left;">
+                <form action="">
+                    <div class="textbox">
+                        <p>Naziv filma:</p>
+                        <input type="text" name="name" id="name" placeholder="Naziv filma" readonly autofocus>
+                    </div>
+                    <div class="textbox">
+                        <p>Reziser:</p>
+                        <input type="text" name="director" id="director" placeholder="Reziser" readonly>
+                    </div>
+                    <div class="textbox">
+                        <p>Godina izdanja:</p>
+                        <input type="number" name="release_date" id="release_date" placeholder="Godina izdanja" readonly>
+                    </div>
+                    <div class="textbox">
+                        <p>Glavne uloge:</p>
+                        <input type="text" name="lead_actors" id="lead_actors" placeholder="Glavne uloge" readonly>
+                    </div>
+                    <div class="textbox">
+                        <p>Sporedne uloge:</p>
+                        <input type="text" name="supporting_actors" id="supporting_actors" placeholder="Sporedne uloge" readonly>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
     <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
