@@ -92,6 +92,17 @@
         session_abort();
     }
 
+    if ($operacija == "DELETE_USER") {
+        session_start();
+
+        $username = $_SESSION['username'];
+
+        $sql = "DELETE FROM users WHERE username='{$username}';";
+        $conn -> query($sql);
+
+        session_abort();
+    }
+
     if ($operacija == "ADD_MOVIE") {
         $name = trim($_POST["name"]);
         $director = trim($_POST["director"]);

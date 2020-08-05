@@ -23,7 +23,7 @@
                 <input type="button" class="btn" value="Potvrdi">
             </div>
         </form>
-        <div class="registerLink">
+        <div class="link-div">
             <a href="register.php">Registruj se</a>
         </div>
         <div id="rezultat"></div>
