@@ -130,36 +130,7 @@
     if ($operacija == "SEARCH_MOVIES") {
         $search = trim($_GET["search"]);
 
-        //pretraga po nazivu filma
-        $sql = "SELECT * FROM movies WHERE name like '%{$search}%';";
-        $result_set = $conn->query($sql);
-        $movies = [];
-
-        while ($red = $result_set->fetch_object()) {
-            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
-            $movies[] = $movie;
-        }
-
-        //pretraga po imenu rezisera
-        $sql = "SELECT * FROM movies WHERE director like '%{$search}%';";
-        $result_set = $conn->query($sql);
-
-        while ($red = $result_set->fetch_object()) {
-            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
-            $movies[] = $movie;
-        }
-
-        //pretraga po glavnim ulogama
-        $sql = "SELECT * FROM movies WHERE leadActors like '%{$search}%';";
-        $result_set = $conn->query($sql);
-
-        while ($red = $result_set->fetch_object()) {
-            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
-            $movies[] = $movie;
-        }
-
-        //pretraga po sporednim ulogama
-        $sql = "SELECT * FROM movies WHERE supportingActors like '%{$search}%';";
+        $sql = "SELECT * FROM movies WHERE name like '%{$search}%' OR director like '%{$search}%' OR leadActors like '%{$search}%' OR supportingActors like '%{$search}%';";
         $result_set = $conn->query($sql);
 
         while ($red = $result_set->fetch_object()) {
