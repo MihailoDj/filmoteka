@@ -668,3 +668,31 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 136
+[07-Aug-2020 15:22:06 Europe/Berlin] PHP Notice:  Undefined property: mysqli_result::$id in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 43
+[07-Aug-2020 15:22:14 Europe/Berlin] PHP Notice:  Undefined variable: userID in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 194
+[07-Aug-2020 15:22:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:198
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 198
+[07-Aug-2020 15:22:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:198
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 198
+[07-Aug-2020 15:23:04 Europe/Berlin] PHP Notice:  Undefined property: mysqli_result::$id in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 43
+[07-Aug-2020 15:23:08 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 143
+[07-Aug-2020 15:23:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:198
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 198
+[07-Aug-2020 15:25:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_objct() in C:\xampp\htdocs\filmoteka\config\kontroler.php:43
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 43
+[07-Aug-2020 15:25:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_objct() in C:\xampp\htdocs\filmoteka\config\kontroler.php:43
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 43
+[07-Aug-2020 15:25:59 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 48
+[07-Aug-2020 15:26:05 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 48
+[07-Aug-2020 15:26:22 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 48
+[07-Aug-2020 15:26:59 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 48

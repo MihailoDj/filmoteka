@@ -1,23 +1,8 @@
-document.querySelector(".btn").addEventListener("click", () => {
-    search_movies();
-});
-
-window.addEventListener("keypress", e => {
-    var key = e.which || e.keyCode;
-    if (key === 13) {
-        e.preventDefault();
-        search_movies();
-    }
-});
-
-function search_movies() {
-    
-    let search = $("#search").val();
-    console.log(search);
+function return_saved_movies() {
     $.ajax({
-        url: 'config/kontroler.php?metoda=SEARCH_MOVIES&search=' + search,
+        url: 'config/kontroler.php?metoda=RETURN_SAVED_MOVIES',
         success: function(data) {
-            var output='<h2 style="text-align:center;">Rezultati pretrage:</h2>';
+            var output='';
             var img_src;
             $.each(JSON.parse(data),function(i,red){
                 fetch("https://api.themoviedb.org/3/search/movie?api_key=62fb072caa5dadc2e98f8419aafa9a50&query=" + red.name)
@@ -34,16 +19,24 @@ function search_movies() {
 
                         output+='<div class="movie-card" style="background-image: url('+img_src+');">';
                         output+='<button type="button" class="btn" onclick="showMovie('+red.movieID+')" style="margin-top:14rem;"><i class="fas fa-info"></i></button>';
-                        output+='<button type="button" class="btn" onclick="saveMovie('+red.movieID+')"><i class="fas fa-plus"></i></button>';
+                        output+='<button type="button" class="btn" onclick="deleteMovie('+red.movieID+')"><i class="fa fa-trash"></i></button>';
                         output+='</div>';
 
                         document.querySelector('#movies-table').innerHTML = output;
-                        document.querySelector('#movies-table').style.display = "block";
-                        document.querySelector('#movies-table').style.marginTop = "32rem";
-                        
                     });
             });
             
+        }
+    })
+}
+
+return_saved_movies();
+
+function deleteMovie(id) {
+    $.ajax({
+        url: 'config/kontroler.php?metoda=DELETE_SAVED_MOVIE&id=' + id,
+        success: function(data) {
+            return_saved_movies();
         }
     })
 }
@@ -59,11 +52,11 @@ function showMovie(id) {
             $("#release_date").val(movie.releaseDate);
             $("#lead_actors").val(movie.leadActors);
             $("#supporting_actors").val(movie.supportingActors);
-
         }
     })
     modal.style.display = "block";
 }
+
 
 document.querySelector('.close').addEventListener("click", () => {
     modal.style.display = "none";
@@ -74,12 +67,3 @@ window.addEventListener("click", e => {
         modal.style.display = "none";
       }
 });
-
-function saveMovie(id) {
-    $.ajax({
-        url: 'config/kontroler.php?metoda=SAVE_MOVIE&id=' + id,
-        success: function() {
-            
-        }
-    })
-}

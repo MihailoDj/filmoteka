@@ -141,6 +141,23 @@
         echo json_encode($movies);
     }
 
+    if ($operacija == "SAVE_MOVIE") {
+        session_start();
+
+        $movieID = trim($_GET['id']);
+        $username = $_SESSION['username'];
+        $sql = "SELECT * FROM users WHERE username='{$username}';";
+        $result_set = $conn->query($sql);
+        $userID = null;
+
+        while($red = $result_set->fetch_object()) {
+            $userID = $red->id;
+        }
+        
+        $sql = "INSERT INTO savedmovies VAlUES (DEFAULT, {$userID}, {$movieID});";
+        $conn->query($sql);
+    }
+
     if ($operacija == "GET_MOVIE") {
         $id = trim($_GET['id']);
         $sql = "SELECT * FROM movies WHERE movieID={$id}";
@@ -172,6 +189,56 @@
         $id = trim($_GET['id']);
     
         $sql = "DELETE FROM movies WHERE movieID =" . $id;
+        $conn->query($sql);
+    }
+
+    if ($operacija == "RETURN_SAVED_MOVIES") {
+        session_start();
+        $username = $_SESSION['username'];
+        $sql = "SELECT * FROM users WHERE username='{$username}';";
+        $result_set = $conn->query($sql);
+        $userID = null;
+
+        while ($red = $result_set->fetch_object()) {
+            $userID = $red->id;
+        }
+
+        $sql = "SELECT * FROM savedmovies WHERE userID={$userID};";
+        $result_set = $conn->query($sql);
+
+        $movieIDs = [];
+        while ($red = $result_set->fetch_object()) {
+            $movieIDs[] = $red->movieID;
+        }
+
+        $movies = [];
+        foreach($movieIDs as $id) {
+            $sql = "SELECT * FROM movies WHERE movieID={$id};";
+            $rs = $conn->query($sql);
+            
+            while($red = $rs->fetch_object()) {
+                $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
+                $movies[] = $movie;
+            }
+        }
+
+        echo json_encode($movies);
+    }
+
+    if ($operacija == "DELETE_SAVED_MOVIE") {
+        session_start();
+
+        $movieID = $_GET['id'];
+        $username = $_SESSION['username'];
+        $sql = "SELECT * FROM users WHERE username='{$username}';";
+        $result_set = $conn->query($sql);
+        $userID = null;
+
+        while ($red = $result_set->fetch_object()) {
+            $userID = $red->id;
+        }
+
+        $sql = "DELETE FROM savedmovies WHERE movieID={$movieID} AND userID={$userID}";
         $conn->query($sql);
     }
 ?>
