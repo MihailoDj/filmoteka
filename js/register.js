@@ -20,8 +20,13 @@ function register() {
         type: 'POST',
         data: user,
         success: function(data) {
-            $(".rezultat").html(data);
-            $(".rezultat").css("display", "block");
+            if (data.toString().includes("script")) {
+                $(".rezultat").html(data);
+                $(".rezultat").css("display", "none");
+            } else {
+                $(".rezultat").html(data);
+                $(".rezultat").css("display", "block");
+            }
         }
     })
 }
