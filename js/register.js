@@ -20,8 +20,8 @@ function register() {
         type: 'POST',
         data: user,
         success: function(data) {
-            $("#rezultat").html(data);
-            $("#rezultat").css("text-align", "center");
+            $(".rezultat").html(data);
+            $(".rezultat").css("display", "block");
         }
     })
 }

@@ -23,8 +23,9 @@
                 <input type="button" class="btn" value="Potvrdi">
             </div>
         </form>
-        <div id="rezultat"></div>
     </div>
+
+    <div class="rezultat"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/register.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>

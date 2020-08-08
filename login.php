@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="form-wrapper">
-        <h1>Uloguj se</h1>
+        <h1>Prijavi se</h1>
         <form action="" method="">
             <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="Korisnicko ime" autofocus>
+                <input type="text" name="username" id="username" placeholder="Korisničko ime" autofocus>
             </div>
 
             <div class="textbox">
@@ -26,8 +26,9 @@
         <div class="link-div">
             <a href="register.php">Registruj se</a>
         </div>
-        <div id="rezultat"></div>
     </div>
+
+    <div class="rezultat"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/login.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>

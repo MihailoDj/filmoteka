@@ -7,9 +7,25 @@
 
     $operacija = isset($_GET['metoda']) ? $_GET['metoda'] : $_POST['metoda'];
 
-    if ($operacija == 'REGISTER') {
+    if ($operacija == "REGISTER") {
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
+
+        if ($username == "") {
+            echo("Unesite korisničko ime");
+            return;
+        }
+
+        if ($password == "") {
+            echo("Unesite lozinku!");
+            return;
+        }
+
+        if (strlen($password) < 8) {
+            echo("Lozinka mora imati bar 8 karaktera!");
+            return;
+        }
+
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "SELECT * FROM users WHERE username='{$username}'";
@@ -21,10 +37,10 @@
             if ($conn->query($sql)) {
                 echo('<script type="text/javascript">location.href = \'login.php\';</script>');
             } else {
-                echo("Neuspesna registracija.");
+                echo("Neuspešna registracija.");
             }
         } else {
-            echo("Korisnicko ime je zauzeto!");
+            echo("Korisničko ime je zauzeto!");
         }
     }
 
@@ -41,7 +57,7 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows == 0) {
-            echo("Pogresno korisnicko ime");
+            echo("Pogrešno korisničko ime!");
         } else {
             if (password_verify($password, $result->fetch_object()->password)) {
                 if ($username == "admin@filmoteka.com") {
@@ -50,7 +66,7 @@
                     echo('<script type="text/javascript">location.href = \'index.php\';</script>');
                 }
             } else {
-                echo("Pogresna lozinka.");
+                echo("Pogrešna lozinka!");
             }
         }
     }

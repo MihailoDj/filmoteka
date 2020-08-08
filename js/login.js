@@ -18,8 +18,9 @@ function login() {
         type: 'POST',
         data: user,
         success: function(data) {
-            $("#rezultat").html(data);
-            $("#rezultat").css("text-align", "center");
+            $(".rezultat").html(data);
+            $(".rezultat").css("text-align", "center");
+            $(".rezultat").css("display", "block");
         }
     })
 }
