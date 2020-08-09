@@ -169,7 +169,7 @@ a:visited {
   color: var(--main);
   margin: 10% auto;
   padding: 20px;
-  border: 1px solid var(--main);
+  border: 2px solid var(--main);
   width: 20rem;
   border-radius: 1rem;
   text-align: center;
@@ -353,6 +353,10 @@ tbody {
 
   .navbar a {
       display: none;
+  }
+
+  .modal-content {
+    margin-top: 7.5rem;
   }
 }
 

@@ -19,7 +19,7 @@
         <form action="">
             <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="Korisnicko ime" autofocus>
+                <input type="text" name="username" id="username" placeholder="Korisničko ime" autofocus>
             </div>
             <div class="textbox">
                 <i class="fas fa-lock"></i>

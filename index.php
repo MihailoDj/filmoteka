@@ -13,14 +13,14 @@
     ?>
 
     <div class="form-wrapper">
-        <h1>Pronadji film</h1>
+        <h1>Pronađi film</h1>
         <form action="">
             <div class="textbox">
                 <i class="fas fa-search"></i>
-                <input type="search" name="search" id="search" placeholder="Ime filma, rezisera. . ." autofocus>
+                <input type="search" name="search" id="search" placeholder="Ime filma, režisera. . ." autofocus>
             </div>
             <div class="btn-wrapper">
-                <input type="button" class="btn" value="Pretrazi">
+                <input type="button" class="btn" value="Pretraži">
             </div>
         </form>
     </div>
@@ -38,7 +38,7 @@
                         <input type="text" name="name" id="name" placeholder="Naziv filma" readonly autofocus>
                     </div>
                     <div class="textbox">
-                        <p>Reziser:</p>
+                        <p>Režiser:</p>
                         <input type="text" name="director" id="director" placeholder="Reziser" readonly>
                     </div>
                     <div class="textbox">
@@ -63,5 +63,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/search_movies.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
+    <script src="js/back_to_top.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>
