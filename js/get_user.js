@@ -4,7 +4,6 @@ function get_user() {
         success: function(data) {
             let user = JSON.parse(data);
 
-            console.log(user);
             $("#username").val(user.username);
             $("#password").val(user.password);
         }

@@ -698,3 +698,6 @@ Stack trace:
 [07-Aug-2020 15:26:59 Europe/Berlin] PHP Notice:  Trying to get property 'password' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 48
 [08-Aug-2020 23:58:45 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 157
 [09-Aug-2020 00:00:06 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 157
+[09-Aug-2020 23:26:43 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98
+[09-Aug-2020 23:26:56 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98
+[09-Aug-2020 23:27:00 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98

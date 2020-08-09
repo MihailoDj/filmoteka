@@ -3,10 +3,12 @@ document.querySelector("#user-delete-btn").addEventListener("click", () => {
 });
 
 function delete_user() {
-    $.ajax({
-        url: 'config/kontroler.php?metoda=DELETE_USER',
-        success: function() {
-            window.location = "login.php";
-        }
-    })
+    if (confirm("Da li ste sigurni? Nećete moći da povratite nalog.")) {
+        $.ajax({
+            url: 'config/kontroler.php?metoda=DELETE_USER',
+            success: function() {
+                window.location = "login.php";
+            }
+        })
+    }
 }

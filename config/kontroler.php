@@ -57,7 +57,7 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows == 0) {
-            echo("Pogrešno korisničko ime!");
+            echo("Takav korisnik ne postoji!");
         } else {
             if (password_verify($password, $result->fetch_object()->password)) {
                 if ($username == "admin@filmoteka.com") {
@@ -94,14 +94,35 @@
 
         $new_username = trim($_POST["username"]);
         $new_password = trim($_POST["password"]);
+
+        if ($new_username == "") {
+            echo("Unesite korisničko ime!");
+            return;
+        }
+
+        if ($new_password == "") {
+            echo("Unesite lozinku!");
+            return;
+        }
+
+        if (strlen($new_password) < 8) {
+            echo("Nova lozinka mora imati bar 8 karaktera!");
+            return;
+        }
+
         $new_password_hashed = password_hash($new_password, PASSWORD_DEFAULT);
 
         $sql="UPDATE users SET username='{$new_username}', password='{$new_password_hashed}' WHERE username='{$old_username}'";
 
-        $conn->query($sql);
+        if ($conn->query($sql)) {
+            $_SESSION['username'] = $new_username;
+            $_SESSION['password'] = $new_password;
 
-        $_SESSION['username'] = $new_username;
-        $_SESSION['password'] = $new_password;
+            echo("Podešavanja uspešno sačuvana.");
+        } else {
+            echo("Korisničko ime je već zauzeto!");
+        }
+
     }
 
     if ($operacija == "LOG_OUT") {

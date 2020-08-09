@@ -18,8 +18,13 @@ function update_user() {
         url: 'config/kontroler.php?metoda=UPDATE_USER',
         type: 'POST',
         data: user,
-        success: function() {
-            
+        success: function(data) {
+            if (data.toString().includes("uspešno")) {
+                $(".rezultat").css("background-color", "#b4f59a");
+                $(".rezultat").css("border-color", "green");
+            }
+            $(".rezultat").html(data);
+            $(".rezultat").css("display", "block");
         }
     })
 }
