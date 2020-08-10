@@ -12,7 +12,7 @@
         include 'navbar_user.php';
     ?>
 
-    <div id="movies-table"></div>
+    <div id="movies-table" class="saved-movies-table"></div>
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <h3 id="rezultatBrisanja"></h3>
+    <div class="rezultat"></div>
     <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

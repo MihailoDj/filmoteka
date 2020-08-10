@@ -4,6 +4,14 @@ function return_saved_movies() {
         success: function(data) {
             var output='';
             var img_src;
+
+            if (data === "[]" || data === []) {
+                $("#movies-table").css("display", "none");
+                $(".rezultat").html("Niste sačuvali nijedan film. Dodajte filmove na početnoj strani.");
+                $(".rezultat").css("display", "block");
+                return;
+            }
+
             $.each(JSON.parse(data),function(i,red){
                 fetch("https://api.themoviedb.org/3/search/movie?api_key=62fb072caa5dadc2e98f8419aafa9a50&query=" + red.name)
                     .then((result) => {
@@ -23,6 +31,7 @@ function return_saved_movies() {
                         output+='</div>';
 
                         document.querySelector('#movies-table').innerHTML = output;
+                        $(".saved-movies-table").css("display", "block");
                     });
             });
             

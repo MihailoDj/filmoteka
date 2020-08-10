@@ -13,12 +13,28 @@ window.addEventListener("keypress", e => {
 function search_movies() {
     
     let search = $("#search").val();
-    console.log(search);
+    
+    if (search === "") {
+        $(".rezultat").html("Polje za pretragu ne može biti prazno.");
+        $("#movies-table").css("display", "none");
+        $(".rezultat").css("display", "block");
+        return;
+    }
+
     $.ajax({
         url: 'config/kontroler.php?metoda=SEARCH_MOVIES&search=' + search,
         success: function(data) {
             var output='<h2 style="text-align:center;">Rezultati pretrage:</h2>';
             var img_src;
+
+            console.log(data);
+            if (data === "null" || data === null) {
+                $(".rezultat").html("Takav film ne postoji u bazi.");
+                $("#movies-table").css("display", "none");
+                $(".rezultat").css("display", "block");
+                return;
+            }
+
             $.each(JSON.parse(data),function(i,red){
                 fetch("https://api.themoviedb.org/3/search/movie?api_key=62fb072caa5dadc2e98f8419aafa9a50&query=" + red.name)
                     .then((result) => {
@@ -40,7 +56,7 @@ function search_movies() {
                         document.querySelector('#movies-table').innerHTML = output;
                         document.querySelector('#movies-table').style.display = "block";
                         document.querySelector('#movies-table').style.marginTop = "32rem";
-                        
+                        $(".rezultat").css("display", "none");
                     });
             });
             
@@ -78,8 +94,10 @@ window.addEventListener("click", e => {
 function saveMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=SAVE_MOVIE&id=' + id,
-        success: function() {
-            
+        success: function(data) {
+            if (data.toString() !== "" && data.toString() !== null) {
+                alert(data);
+            }
         }
     })
 }

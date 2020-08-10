@@ -193,7 +193,10 @@
         }
         
         $sql = "INSERT INTO savedmovies VAlUES (DEFAULT, {$userID}, {$movieID});";
-        $conn->query($sql);
+        
+        if (!$conn->query($sql)) {
+            echo("Već ste sačuvali ovaj film.");
+        }
     }
 
     if ($operacija == "GET_MOVIE") {

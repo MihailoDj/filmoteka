@@ -264,6 +264,10 @@ a:visited {
   margin-bottom: 2rem;
 }
 
+.saved-movies-table {
+  display: none;
+}
+
 
 #movies-table .movie-card {
   width: 12rem;

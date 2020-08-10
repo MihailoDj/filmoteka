@@ -58,6 +58,7 @@
             </div>
         </div>
     </div>
+    <div class="rezultat"></div>
 
     <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
 
