@@ -701,3 +701,43 @@ Stack trace:
 [09-Aug-2020 23:26:43 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98
 [09-Aug-2020 23:26:56 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98
 [09-Aug-2020 23:27:00 Europe/Berlin] PHP Notice:  Undefined variable: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 98
+[10-Aug-2020 22:36:31 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:36:33 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:36:37 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:36:38 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:37:01 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:37:02 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 178
+[10-Aug-2020 22:37:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:173
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 173
+[10-Aug-2020 22:38:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:176
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 176
+[10-Aug-2020 22:38:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:176
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 176
+[10-Aug-2020 22:39:00 Europe/Berlin] PHP Warning:  mysqli::query(): Empty query in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 174
+[10-Aug-2020 22:39:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:176
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 176
+[10-Aug-2020 22:39:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:174
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 174
+[10-Aug-2020 22:40:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:174
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 174
+[10-Aug-2020 22:43:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:174
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 174
+[10-Aug-2020 22:44:10 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
+[10-Aug-2020 22:44:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetch_object() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:174
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 174

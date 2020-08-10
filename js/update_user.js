@@ -22,9 +22,14 @@ function update_user() {
             if (data.toString().includes("uspešno")) {
                 $(".rezultat").css("background-color", "#b4f59a");
                 $(".rezultat").css("border-color", "green");
+            } else {
+                $(".rezultat").css("background-color", "rgb(247, 150, 171)");
+                $(".rezultat").css("border-color", "red");
             }
+
             $(".rezultat").html(data);
             $(".rezultat").css("display", "block");
+            
         }
     })
 }

@@ -168,6 +168,7 @@
         $search = trim($_GET["search"]);
 
         $sql = "SELECT * FROM movies WHERE name like '%{$search}%' OR director like '%{$search}%' OR leadActors like '%{$search}%' OR supportingActors like '%{$search}%';";
+        
         $result_set = $conn->query($sql);
 
         while ($red = $result_set->fetch_object()) {
