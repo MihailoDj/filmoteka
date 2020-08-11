@@ -24,14 +24,19 @@ function add_movie() {
         type: 'POST',
         data: movie,
         success: function(data) {
-            $("#rezultat").html(data);
-            $("#rezultat").css("text-align", "center");
-
-            $("#name").val('');
-            $("#director").val('');
-            $("#release_date").val('');
-            $("#lead_actors").val('');
-            $("#supporting_actors").val('');
+            
+            if (data.toString().includes(" ")) {
+                $(".rezultat").html(data);
+                $(".rezultat").css("bottom", "1rem");
+                $(".rezultat").css("display", "block");
+            } else {
+                $("#name").val('');
+                $("#director").val('');
+                $("#release_date").val('');
+                $("#lead_actors").val('');
+                $("#supporting_actors").val('');
+                $(".rezultat").css("display", "none");
+            }
         }
     })
 }

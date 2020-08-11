@@ -808,3 +808,23 @@ Stack trace:
 [11-Aug-2020 00:10:35 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
 [11-Aug-2020 00:10:41 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
 [11-Aug-2020 00:10:43 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
+[11-Aug-2020 23:47:00 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
+[11-Aug-2020 23:47:47 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
+[11-Aug-2020 23:51:46 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 179
+[12-Aug-2020 00:25:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function num_rows() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:158
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 158
+[12-Aug-2020 00:25:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function num_rows() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:158
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 158
+[12-Aug-2020 00:25:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function num_rows() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:158
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 158
+[12-Aug-2020 00:25:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function num_rows() on bool in C:\xampp\htdocs\filmoteka\config\kontroler.php:158
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 158
+[12-Aug-2020 00:26:28 Europe/Berlin] PHP Notice:  Trying to get property 'num_rows' of non-object in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 158

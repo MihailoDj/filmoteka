@@ -27,7 +27,6 @@ function search_movies() {
             var output='<h2 style="text-align:center;">Rezultati pretrage:</h2>';
             var img_src;
 
-            console.log(data);
             if (data === "null" || data === null) {
                 $(".rezultat").html("Takav film ne postoji u bazi.");
                 $("#movies-table").css("display", "none");
