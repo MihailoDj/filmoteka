@@ -39,5 +39,6 @@
     <script src="js/get_user.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
     <script src="js/update_user.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
     <script src="js/delete_user.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
+    <script src="js/close-error.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>

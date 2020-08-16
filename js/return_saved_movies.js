@@ -45,6 +45,13 @@ function deleteMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=DELETE_SAVED_MOVIE&id=' + id,
         success: function(data) {
+            $(".rezultat").css("position", "relative");
+            $(".rezultat").css("background-color", "#b4f59a");
+            $(".rezultat").css("border-color", "green");
+            $(".rezultat").html(data);
+            $(".rezultat").css("bottom", "1rem");
+            $(".rezultat").css("display", "block");
+
             return_saved_movies();
         }
     })

@@ -22,6 +22,10 @@ function fillMoviesTable() {
                     .then((rs) => {
                         try {
                             img_src = "https://image.tmdb.org/t/p/w185/" + rs.results[0].poster_path;
+
+                            if (rs.results[0].poster_path === null) {
+                                img_src = "./img/question_mark.jpg";
+                            }
                         }
                         catch (err) {
                             img_src = "./img/question_mark.jpg";
@@ -45,6 +49,13 @@ function deleteMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=DELETE_MOVIE&id=' + id,
         success: function(data) {
+            $(".rezultat").css("position", "relative");
+            $(".rezultat").css("background-color", "#b4f59a");
+            $(".rezultat").css("border-color", "green");
+            $(".rezultat").html(data);
+            $(".rezultat").css("bottom", "1rem");
+            $(".rezultat").css("display", "block");
+
             fillMoviesTable();
         }
     })

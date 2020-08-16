@@ -50,5 +50,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/return_movies.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
     <script src="js/back_to_top.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
+    <script src="js/close-error.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>

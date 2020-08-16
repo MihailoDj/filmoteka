@@ -25,8 +25,10 @@ function add_movie() {
         data: movie,
         success: function(data) {
             
-            if (data.toString().includes(" ")) {
+            if (!data.toString().includes("Film uspešno sačuvan.")) {
                 $(".rezultat").html(data);
+                $(".rezultat").css("background-color", "rgb(247, 150, 171)");
+                $(".rezultat").css("border-color", "red");
                 $(".rezultat").css("bottom", "1rem");
                 $(".rezultat").css("display", "block");
             } else {
@@ -35,7 +37,12 @@ function add_movie() {
                 $("#release_date").val('');
                 $("#lead_actors").val('');
                 $("#supporting_actors").val('');
-                $(".rezultat").css("display", "none");
+
+                $(".rezultat").css("background-color", "#b4f59a");
+                $(".rezultat").css("border-color", "green");
+                $(".rezultat").css("bottom", "1rem");
+                $(".rezultat").html(data);
+                $(".rezultat").css("display", "block");
             }
         }
     })

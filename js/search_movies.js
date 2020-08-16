@@ -27,7 +27,6 @@ function search_movies() {
             var output='<h2 style="text-align:center;">Rezultati pretrage:</h2>';
             var img_src;
 
-            console.log(data);
             if (data === "null" || data === null || data === [] || data === "[]") {
                 $(".rezultat").html("Takav film ne postoji u bazi.");
                 $("#movies-table").css("display", "none");
@@ -95,8 +94,20 @@ function saveMovie(id) {
     $.ajax({
         url: 'config/kontroler.php?metoda=SAVE_MOVIE&id=' + id,
         success: function(data) {
-            if (data.toString() !== "" && data.toString() !== null) {
-                alert(data);
+            if (data.toString().includes("Već ste sačuvali ovaj film.")) {
+                $(".rezultat").css("position", "relative");
+                $(".rezultat").css("background-color", "rgb(247, 150, 171)");
+                $(".rezultat").css("border-color", "red");
+                $(".rezultat").html(data);
+                $(".rezultat").css("bottom", "1rem");
+                $(".rezultat").css("display", "block");
+            } else {
+                $(".rezultat").css("position", "relative");
+                $(".rezultat").css("background-color", "#b4f59a");
+                $(".rezultat").css("border-color", "green");
+                $(".rezultat").html(data);
+                $(".rezultat").css("bottom", "1rem");
+                $(".rezultat").css("display", "block");
             }
         }
     })

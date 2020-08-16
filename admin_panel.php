@@ -20,5 +20,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/return_users.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="js/close-error.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>
