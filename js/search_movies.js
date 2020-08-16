@@ -15,7 +15,7 @@ function search_movies() {
     let search = $("#search").val();
     
     if (search === "") {
-        $(".rezultat").html("Polje za pretragu ne može biti prazno.");
+        $(".rezultat").html("Polje za pretragu ne može biti prazno.    <span class=\"close-error\">&#10006;</span>");
         $("#movies-table").css("display", "none");
         $(".rezultat").css("display", "block");
         return;
@@ -28,7 +28,7 @@ function search_movies() {
             var img_src;
 
             if (data === "null" || data === null || data === [] || data === "[]") {
-                $(".rezultat").html("Takav film ne postoji u bazi.");
+                $(".rezultat").html("Takav film ne postoji u bazi.  <span class=\"close-error\">&#10006;</span>");
                 $("#movies-table").css("display", "none");
                 $(".rezultat").css("display", "block");
                 return;
@@ -95,20 +95,16 @@ function saveMovie(id) {
         url: 'config/kontroler.php?metoda=SAVE_MOVIE&id=' + id,
         success: function(data) {
             if (data.toString().includes("Već ste sačuvali ovaj film.")) {
-                $(".rezultat").css("position", "relative");
                 $(".rezultat").css("background-color", "rgb(247, 150, 171)");
                 $(".rezultat").css("border-color", "red");
-                $(".rezultat").html(data);
-                $(".rezultat").css("bottom", "1rem");
-                $(".rezultat").css("display", "block");
             } else {
-                $(".rezultat").css("position", "relative");
                 $(".rezultat").css("background-color", "#b4f59a");
                 $(".rezultat").css("border-color", "green");
+            }
+                $(".rezultat").css("position", "relative");
                 $(".rezultat").html(data);
                 $(".rezultat").css("bottom", "1rem");
                 $(".rezultat").css("display", "block");
-            }
         }
     })
 }

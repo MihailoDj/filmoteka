@@ -233,13 +233,19 @@
         $lead_actors = trim($_POST["lead_actors"]);
         $supporting_actors = trim($_POST["supporting_actors"]);
 
+        if ($movieID == "" || $name == "" || $director == "" || $release_date == "" || $lead_actors == "" || $supporting_actors == "") {
+            echo("Sva polja moraju biti popunjena.    <span class=\"close-error\">&#10006;</span>");
+            return;
+        }
+
         $sql="UPDATE movies SET name='{$name}', director='{$director}', releaseDate={$release_date}, 
             leadActors='{$lead_actors}', supportingActors='{$supporting_actors}' WHERE movieID={$movieID}";
 
         if (!$conn->query($sql)) {
-            echo("Takav film već postoji u bazi.    <span class=\"close-error\">&#10006;</span>");
+            echo("Došlo je do greške pri čuvanju.    <span class=\"close-error\">&#10006;</span>");
             return;
         }
+        echo("Podaci uspešno izmenjeni.    <span class=\"close-error\">&#10006;</span>");
     }
 
     if($operacija == 'DELETE_MOVIE'){

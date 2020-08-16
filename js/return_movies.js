@@ -98,22 +98,22 @@ function updateMovie () {
         type: 'POST',
         data: m,
         success: function(data) {
-            if (data.toString().includes(" ")) {
-                alert(data);
+            if (!data.toString().includes("Podaci uspešno izmenjeni.")) {
+                $(".rezultat").css("background-color", "rgb(247, 150, 171)");
+                $(".rezultat").css("border-color", "red");
             } else {
+                $(".rezultat").css("background-color", "#b4f59a");
+                $(".rezultat").css("border-color", "green");
                 modal.style.display="none";
             }
-            
+            $(".rezultat").css("position", "relative");
+            $(".rezultat").css("bottom", "1rem");
+            $(".rezultat").html(data);
+            $(".rezultat").css("display", "block");
         }
     })
 }
 
-window.addEventListener("keypress", e => {
-    var key = e.which || e.keyCode;
-    if (key === 13) {
-        updateMovie();
-    }
-});
 
 document.querySelector('.close').addEventListener("click", () => {
     modal.style.display = "none";
