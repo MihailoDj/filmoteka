@@ -259,31 +259,14 @@
     if ($operacija == "RETURN_SAVED_MOVIES") {
         session_start();
         $username = $_SESSION['username'];
-        $sql = "SELECT * FROM users WHERE username='{$username}';";
-        $result_set = $conn->query($sql);
-        $userID = null;
 
-        while ($red = $result_set->fetch_object()) {
-            $userID = $red->id;
-        }
-
-        $sql = "SELECT * FROM savedmovies WHERE userID={$userID};";
-        $result_set = $conn->query($sql);
-
-        $movieIDs = [];
-        while ($red = $result_set->fetch_object()) {
-            $movieIDs[] = $red->movieID;
-        }
+        $sql = "SELECT * FROM savedmovies sm JOIN movies m ON sm.movieID=m.movieID WHERE sm.userID IN (SELECT id FROM users WHERE username='{$username}');";
+        $rs = $conn->query($sql);
 
         $movies = [];
-        foreach($movieIDs as $id) {
-            $sql = "SELECT * FROM movies WHERE movieID={$id};";
-            $rs = $conn->query($sql);
-            
-            while($red = $rs->fetch_object()) {
-                $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
-                $movies[] = $movie;
-            }
+        while($red = $rs->fetch_object()) {
+            $movie = new Movie($red->movieID, $red->name, $red->director, $red->releaseDate, $red->leadActors, $red->supportingActors);
+            $movies[] = $movie;
         }
 
         echo json_encode($movies);
@@ -294,15 +277,9 @@
 
         $movieID = $_GET['id'];
         $username = $_SESSION['username'];
-        $sql = "SELECT * FROM users WHERE username='{$username}';";
-        $result_set = $conn->query($sql);
-        $userID = null;
 
-        while ($red = $result_set->fetch_object()) {
-            $userID = $red->id;
-        }
+        $sql = "DELETE FROM savedmovies WHERE movieID={$movieID} AND userID IN (SELECT id FROM users WHERE username='{$username}');";
 
-        $sql = "DELETE FROM savedmovies WHERE movieID={$movieID} AND userID={$userID}";
         $conn->query($sql);
         echo("Film uspešno obrisan. <span class=\"close-error\">&#10006;</span>");
     }
