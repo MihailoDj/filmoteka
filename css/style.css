@@ -360,7 +360,6 @@ tbody {
   nav {
       height: 6rem;
   }
-
   .menu {
       transform: scale(1.1);
       margin-top: 0.5rem;
@@ -368,11 +367,9 @@ tbody {
   .menu:hover {
       transform: scale(1.2);
   }
-
   .navbar a {
       display: none;
   }
-
   .modal-content {
     margin-top: 7.5rem;
   }
@@ -384,15 +381,23 @@ tbody {
   .menu {
       display: none;
   }
-  
 }
 
 @media(max-width: 500px) {
   .form-wrapper {
     width: 80%;
   }
+  .form-wrapper h1 {
+    font-size: 30px;
+  }
   .btn-back-to-top {
     display: none !important;
+  }
+  #users-table_wrapper {
+    width: 99%;
+    height: 40rem;
+    top: 60%;
+    margin-bottom: 1rem;
   }
 }
 
@@ -415,5 +420,16 @@ tbody {
     position: top;
     top: 2rem;
     bottom: initial;
+  }
+  .form-wrapper {
+    top: 60%;
+  }
+  .form-wrapper h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  #users-table_wrapper {
+    top: 100%;
+    height: 40rem;
   }
 }
