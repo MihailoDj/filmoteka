@@ -3,68 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pocetna</title>
-
+    <title>Filmoteka - login</title>
     <link rel="stylesheet" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 </head>
 <body>
     <?php
-        include 'navbar_user.php';
+        session_start();
+        $_SESSION = array();
+        session_destroy();
     ?>
-
     <div class="form-wrapper">
-        <h1>Pronađi film</h1>
-        <form action="">
+        <h1>Prijavi se</h1>
+        <form action="" method="">
             <div class="textbox">
-                <i class="fas fa-search"></i>
-                <input type="search" name="search" id="search" placeholder="Ime filma, režisera. . ." autofocus>
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="Korisničko ime" autofocus>
+            </div>
+
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" id="password" placeholder="Lozinka">
             </div>
             <div class="btn-wrapper">
-                <input type="button" class="btn" value="Pretraži">
+                <input type="button" class="btn" value="Potvrdi">
             </div>
         </form>
-    </div>
-
-    <div id="movies-table" class="search-movies-table" style="display:none;"></div>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <br>
-            <div class="" style="text-align: left;">
-                <form action="">
-                    <div class="textbox">
-                        <p>Naziv filma:</p>
-                        <input type="text" name="name" id="name" placeholder="Naziv filma" readonly autofocus>
-                    </div>
-                    <div class="textbox">
-                        <p>Režiser:</p>
-                        <input type="text" name="director" id="director" placeholder="Reziser" readonly>
-                    </div>
-                    <div class="textbox">
-                        <p>Godina izdanja:</p>
-                        <input type="number" name="release_date" id="release_date" placeholder="Godina izdanja" readonly>
-                    </div>
-                    <div class="textbox">
-                        <p>Glavne uloge:</p>
-                        <input type="text" name="lead_actors" id="lead_actors" placeholder="Glavne uloge" readonly>
-                    </div>
-                    <div class="textbox">
-                        <p>Sporedne uloge:</p>
-                        <input type="text" name="supporting_actors" id="supporting_actors" placeholder="Sporedne uloge" readonly>
-                    </div>
-                    
-                </form>
-            </div>
+        <div class="link-div">
+            <a href="register.php">Registruj se</a>
         </div>
     </div>
+
     <div class="rezultat"></div>
 
-    <button class="btn-back-to-top"><i class="fas fa-arrow-up fa-2x"></i></button>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/search_movies.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
-    <script src="js/back_to_top.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
+    <script src="js/login.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
     <script src="js/close-error.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 </body>
 </html>

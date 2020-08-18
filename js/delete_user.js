@@ -7,7 +7,7 @@ function delete_user() {
         $.ajax({
             url: 'config/kontroler.php?metoda=DELETE_USER',
             success: function() {
-                window.location = "login.php";
+                window.location = "index.php";
             }
         })
     }

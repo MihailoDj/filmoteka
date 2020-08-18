@@ -394,10 +394,11 @@ tbody {
     display: none !important;
   }
   #users-table_wrapper {
-    width: 99%;
     height: 40rem;
-    top: 60%;
-    margin-bottom: 1rem;
+    transform: scale(0.8);
+    left: 0;
+    top: 0;
+    width: auto;
   }
 }
 

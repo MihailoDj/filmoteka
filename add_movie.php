@@ -10,6 +10,13 @@
 <body>
     <?php
         include 'navbar_admin.php';
+
+        session_start();
+
+        if (!isset($_SESSION["username"]) || $_SESSION["username"] == null || $_SESSION["username"] == "" || $_SESSION["username"] != "admin@filmoteka.com") {
+            header("Location: index.php");
+            die();
+        }
     ?>
 
     <div class="form-wrapper">

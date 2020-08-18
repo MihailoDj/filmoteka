@@ -12,6 +12,11 @@
         include 'navbar_user.php';
 
         session_start();
+
+        if (!isset($_SESSION["username"]) || $_SESSION["username"] == null || $_SESSION["username"] == "") {
+            header("Location: index.php");
+            die();
+        }
     ?>
 
     <div class="form-wrapper">

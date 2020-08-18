@@ -35,7 +35,7 @@
             $sql = "INSERT INTO users VALUES(DEFAULT, '{$username}', '{$hashed_password}', 2);";
 
             if ($conn->query($sql)) {
-                echo('<script type="text/javascript">location.href = \'login.php\';</script>');
+                echo('<script type="text/javascript">location.href = \'index.php\';</script>');
             } else {
                 echo("Neuspešna registracija.   <span class=\"close-error\">&#10006;</span>");
             }
@@ -63,7 +63,7 @@
                 if ($username == "admin@filmoteka.com") {
                     echo('<script type="text/javascript">location.href = \'admin_panel.php\';</script>');
                 } else {
-                    echo('<script type="text/javascript">location.href = \'index.php\';</script>');
+                    echo('<script type="text/javascript">location.href = \'search_movies.php\';</script>');
                 }
             } else {
                 echo("Pogrešna lozinka! <span class=\"close-error\">&#10006;</span>");
@@ -126,7 +126,9 @@
     }
 
     if ($operacija == "LOG_OUT") {
-        session_abort();
+        session_start();
+        $_SESSION = array();
+        session_destroy();
     }
 
     if ($operacija == "DELETE_USER") {
@@ -137,7 +139,7 @@
         $sql = "DELETE FROM users WHERE username='{$username}';";
         $conn -> query($sql);
 
-        session_abort();
+        session_destroy();
     }
 
     if ($operacija == "ADD_MOVIE") {

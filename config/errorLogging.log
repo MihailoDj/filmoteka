@@ -833,3 +833,6 @@ Stack trace:
 [12-Aug-2020 01:51:12 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 187
 [12-Aug-2020 01:51:22 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 187
 [12-Aug-2020 02:11:39 Europe/Berlin] PHP Notice:  Undefined variable: movies in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 187
+[18-Aug-2020 00:41:45 Europe/Berlin] PHP Notice:  Undefined index: username in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 77
+[18-Aug-2020 00:41:45 Europe/Berlin] PHP Notice:  Undefined index: password in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 78
+[18-Aug-2020 00:41:45 Europe/Berlin] PHP Notice:  Undefined variable: user in C:\xampp\htdocs\filmoteka\config\kontroler.php on line 87
