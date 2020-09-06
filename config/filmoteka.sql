@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2020 at 11:43 PM
+-- Generation Time: Sep 06, 2020 at 09:33 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `movies` (
   `movieID` int(4) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `director` varchar(50) DEFAULT NULL,
-  `releaseDate` int(4) DEFAULT NULL,
-  `leadActors` varchar(200) DEFAULT NULL,
-  `supportingActors` varchar(200) DEFAULT NULL
+  `name` varchar(50) NOT NULL,
+  `director` varchar(50) NOT NULL,
+  `releaseDate` int(4) NOT NULL,
+  `leadActors` varchar(200) NOT NULL,
+  `supportingActors` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -42,15 +42,18 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`movieID`, `name`, `director`, `releaseDate`, `leadActors`, `supportingActors`) VALUES
-(32, 'The godfather', 'dir', 1972, 'Marlon Brando', 'supp'),
-(48, 'The Matrix', 'dir', 1999, 'Act1, Act2', 'Act3'),
-(52, 'the matrix reloaded', 'dir', 2000, 'Keanu Reaves', 'act2'),
-(55, 'pulp fiction', 'Quentin Tarantino', 1994, 'Uma Thurman', 'supp'),
-(56, 'lepa sela lepo gore', 'dir', 1996, 'act', 'supp'),
-(57, 'film1', 'dir', 2020, 'act', 'supp'),
-(59, 'random film 123', 'dir', 2019, 'act1', 'act2'),
-(60, 'klopka', 'dir', 2007, 'act1', 'act2'),
-(61, 'The hateful Eight', 'Quentin Tarantino', 2016, 'leadact', 'suppact');
+(124, 'the hateful eight', 'Quentin Tarantino', 2015, 'Samuel L. Jasckson', 'Kurt Russell, Tim Roth'),
+(129, 'the lord of the rings: the fellowship of the ring', 'Peter Jackson', 2001, 'Elijah Wood, Ian McKellen, Vigo Mortensen', 'Sean Bean, Orlando Bloom'),
+(136, 'lepa sela lepo gore', 'Srdjan Dragojevic', 1996, 'Dragan Bjelogrlic, Nikola Kojo', 'Velimir Bata Zivojinovic'),
+(138, 'the gentlemen', 'Guy Ritchie', 2019, 'Charlie Hunnam', 'McConaughey, Michelle Dockery'),
+(139, 'the matrix', 'the Wachowskis', 1999, 'Keanu Reaves', 'Lawrence Fishburne'),
+(140, 'the matrix reloaded', 'the Wachowskis', 2003, 'Keanu Reaves', 'Lawrence Fishburne'),
+(141, 'Pulp Fiction', 'Quentin Tarantino', 1994, 'Samuel L. Jasckson, John Travolta, Uma Thurman', 'Bruce Willis, Tim Roth'),
+(142, 'Once upon a time... in Hollywood', 'Quentin Tarantino', 2019, 'Leonardo DiCaprio, Brad Pitt, Margot Robbie', 'Margaret Qualley, Dakota Fanning'),
+(143, 'Inglorious basterds', 'Quentin Tarantino', 2009, 'Brad Pitt, Diane Kruger, Cristoph Waltz', 'Eli Roth, Michael Fassbender'),
+(144, 'star wars episode iv', 'George Lucas', 1977, 'Mark Hamill, Harrison Ford, Carrie Fisher', 'Alec Guinness, David Prowse'),
+(145, 'Random film 123', 'reziser', 2021, 'glavni', 'sporedni'),
+(146, 'Snatch', 'Guy Ritchie', 2000, 'Jason Statham, Brad Pitt', 'Benicio Del Toro');
 
 -- --------------------------------------------------------
 
@@ -88,8 +91,27 @@ CREATE TABLE `savedmovies` (
 --
 
 INSERT INTO `savedmovies` (`id`, `userID`, `movieID`) VALUES
-(18, 61, 48),
-(19, 61, 52);
+(25, 94, 48),
+(26, 94, 52),
+(36, 94, 104),
+(42, 94, 105),
+(37, 94, 107),
+(38, 94, 108),
+(34, 94, 113),
+(35, 94, 114),
+(40, 94, 116),
+(41, 94, 117),
+(56, 94, 120),
+(53, 94, 121),
+(108, 94, 124),
+(57, 94, 127),
+(58, 94, 128),
+(62, 94, 129),
+(93, 94, 132),
+(61, 94, 133),
+(100, 94, 134),
+(79, 94, 135),
+(98, 94, 136);
 
 -- --------------------------------------------------------
 
@@ -116,7 +138,6 @@ INSERT INTO `users` (`id`, `username`, `password`, `roleID`) VALUES
 (33, 'user05', '$2y$10$owwbeccpE8hjCNK7fpE5U.lfW.s5s5Yea6uQ0lCm7ltGvXAs715I.', 2),
 (34, 'user06', '$2y$10$uPdDxZNfKOMDtKp9d1I1se9NJOjUkXHvMnlji0r9n1X1.cA/cEeq6', 2),
 (60, 'user08', '$2y$10$7z.IBSzBe1ATcobqNBFVb.bvPPLD4a3.DjLSs3ISI40m1zXdIvXDq', 2),
-(61, 'nikola96', '$2y$10$g/ggTcXrQ98yEM0GUTwItOb1LFnOBrlgegRTnYYknoOvEo9F46y0O', 2),
 (62, 'user09', '$2y$10$msbS.LOtL94PBl1YGjGBae6OxHe/qou1Mhw7ozsLpB9dQQ.fP4u1m', 2),
 (63, 'user10', '$2y$10$lI8B89lJC/3UvxnFf/EFXu8sDQyS/SS4OvkrN26Wa69JmrCJSwHp2', 2),
 (64, 'user11', '$2y$10$vcWnwOfy6BBUlCVvvTDrG.usz5k5HDscVsSHd1WvF.hRYaWQs57tq', 2),
@@ -140,8 +161,9 @@ INSERT INTO `users` (`id`, `username`, `password`, `roleID`) VALUES
 (87, 'new_user321', '$2y$10$ce452jt1pH0J0XmFILNYROFN6X2AzlEc9ggFFN.dy3KKj8OkBND4S', 2),
 (89, 'bugtest01', '$2y$10$zRCqiq/EK6txH.jFGXmIIubT9jHYHHAobHCKrWArv9u3v2Ih7/Rwu', 2),
 (90, 'bugtest02', '$2y$10$1fbJ6nHvn.lZZ7A7usk79e68BMS//WWWjORiNeS7/P2fSTJLxE3/K', 2),
-(94, 'bugtest03', '$2y$10$F3IB7SBQque6kbMF8JgLBO/woS/2LbaLJh.Ch8KRnbtz..fzWmT9q', 2),
-(95, 'new_user01', '$2y$10$geaZL9dxrTrL5DIQt1BESeZsIYYNXwvuHZ/TRc6UfRagCoifAsqti', 2);
+(94, 'bugtest03', '$2y$10$.RErC4dr580C1DE2X.qFFuByoGywjD/vZc/0fh1yKR7mNjKB1n0Du', 2),
+(95, 'new_user01', '$2y$10$w7I3jZpZdfgNlJGlnBejleKfxzrugAp1LCeQu4i.4IiEtCFKlLQaO', 2),
+(96, 'abcdefgh', '$2y$10$DqKVSRbtIhRtziCLqEGZ3.tuDUmFaP.vie5WgmKGSBdxvBD8E061i', 2);
 
 --
 -- Indexes for dumped tables
@@ -151,7 +173,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `roleID`) VALUES
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
-  ADD PRIMARY KEY (`movieID`);
+  ADD PRIMARY KEY (`movieID`),
+  ADD UNIQUE KEY `unique_movie` (`name`,`director`,`releaseDate`);
 
 --
 -- Indexes for table `roles`
@@ -182,19 +205,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `movieID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `movieID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `savedmovies`
 --
 ALTER TABLE `savedmovies`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- Constraints for dumped tables

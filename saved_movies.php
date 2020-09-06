@@ -32,7 +32,7 @@
                     </div>
                     <div class="textbox">
                         <p>Reziser:</p>
-                        <input type="text" name="director" id="director" placeholder="Reziser" readonly>
+                        <input type="text" name="director" id="director" placeholder="Režiser" readonly>
                     </div>
                     <div class="textbox">
                         <p>Godina izdanja:</p>

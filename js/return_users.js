@@ -1,8 +1,8 @@
 $(document).ready( function () {
     $('#users-table').DataTable({
         "columns": [
-               { "title": "Id" },
-               { "title": "Korisnicko ime" },
+               { "title": "ID" },
+               { "title": "Korisničko ime" },
                { "title": "Uloga" },
            ],
         "ajax": "./config/get_users.php",
